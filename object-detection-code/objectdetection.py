@@ -6,7 +6,7 @@ import cvlib as cv
 from cvlib.object_detection import draw_bbox
 
 
-img= cv.imread("D:/program-work/opencv/facedetection/object.jpg")
+img= cv.imread("object.jpg")    #full path of the image
 # img_resize= cv.resize(img, (600,350))
 
 img=np.array(img)
