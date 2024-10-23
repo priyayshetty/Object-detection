@@ -4,7 +4,7 @@ import numpy as np
 img= cv.imread("women.jpg")    #full path of the image
 cv.imshow("originalimg", img)
 cv.waitKey(0)
-out="D:/program-work/opencv/facedetection/facerect.jpg"
+out="facerect.jpg"     #add output store path
 
 eye_har_cascade= cv.CascadeClassifier("haar_eye.xml")    #full path of the haar cascade
 gray=cv.cvtColor(img, cv.COLOR_BGR2GRAY)
