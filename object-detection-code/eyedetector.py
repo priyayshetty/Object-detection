@@ -1,12 +1,12 @@
 import cv2 as cv
 import numpy as np
 
-img= cv.imread("D:/program-work/opencv/facedetection/women.jpg")
+img= cv.imread("women.jpg")    #full path of the image
 cv.imshow("originalimg", img)
 cv.waitKey(0)
 out="D:/program-work/opencv/facedetection/facerect.jpg"
 
-eye_har_cascade= cv.CascadeClassifier("C:/Users/joejo/Downloads/python-practice/Projects/haar_eye.xml")
+eye_har_cascade= cv.CascadeClassifier("haar_eye.xml")    #full path of the haar cascade
 gray=cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 face=eye_har_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(40,40))
