@@ -6,7 +6,7 @@ out= cv.VideoWriter("output.avi", fourcc, 20.0, (640,480))
  
 cap= cv.VideoCapture(0,cv.CAP_DSHOW)
 
-haar_cascade= cv.CascadeClassifier("C:/Users/joejo/Downloads/python-practice/Projects/haar_eye.xml")
+haar_cascade= cv.CascadeClassifier("haar_eye.xml")   #full path of the haar cascade
 
 def detect_Video_bbox(video):
     gray= cv.cvtColor(video, cv.COLOR_BGR2GRAY)
