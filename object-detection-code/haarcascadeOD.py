@@ -2,14 +2,14 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-img= cv.imread("D:/program-work/opencv/facedetection/women.jpg")
+img= cv.imread("path"+"/women.jpg")
 gray= cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 resize_img= cv.resize(img, (640,480))
 plt.imshow(resize_img)
 plt.show()
 cv.waitKey()
-face_haar_cascade=cv.CascadeClassifier("C:/Users/joejo/Downloads/python-practice/Projects/haar_face.xml")
-eye_haar_cascade=cv.CascadeClassifier("C:/Users/joejo/Downloads/python-practice/Projects/haar_eye.xml")
+face_haar_cascade=cv.CascadeClassifier("haar_face.xml")  #full path of haar cascade
+eye_haar_cascade=cv.CascadeClassifier("haar_eye.xml")    ##full path of haar cascade
 
 def detecte_face(img):
     face_img=img.copy()
