@@ -5,7 +5,7 @@ out=cv.VideoWriter("Output.avi", fourcc,20.0, (640,480) )
 
 cap=cv.VideoCapture(0)
 
-har_cascade=cv.CascadeClassifier("C:/Users/joejo/Downloads/python-practice/Projects/haar_face.xml")
+har_cascade=cv.CascadeClassifier("haar_face.xml")    #full path of the haar cascade
 
 def detect_bounding_box(vid):
     gray= cv.cvtColor(vid, cv.COLOR_BGR2GRAY)
