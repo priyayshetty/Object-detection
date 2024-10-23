@@ -3,9 +3,9 @@ import cv2 as cv
 fourcc=cv.VideoWriter_fourcc(*"XVID")
 out= cv.VideoWriter("output.avi", fourcc, 20.0, (640,480))
 
-cap=cv.VideoCapture("D:/program-work/opencv/cardetection/vehical.mp4")
+cap=cv.VideoCapture("vehical.mp4")   # full path of the video or else if want real time objectdetection write: cap=cv.VideoCapture(0)
 
-har_car_cascade=cv.CascadeClassifier("C:/Users/joejo/Downloads/python-practice/Projects/haar_car.xml")
+har_car_cascade=cv.CascadeClassifier("haar_car.xml")   #full path of haar cascade
 
 def detect_car(video):
     gray= cv.cvtColor(video, cv.COLOR_BGR2GRAY)
